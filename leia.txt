@@ -1,0 +1,8 @@
+O que é Spring Boot ?
+
+Vantagens
+	Padronização
+	Produtividade
+	Fácil implantação
+	Poucas configurações
+
