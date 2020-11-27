@@ -1,8 +1,35 @@
 O que é Spring Boot ?
+	- É um projeto do spring que facilita a criação de projetos standalone a partir dos seus starter, que são dependencias que vamos adicionando a um projeto, que contem as configurações basicas, sendo necessario pouca ou nenhuma configuração. Essas dependencias são adicionadas de acordo com a necessidade do projeto, como por exemplo se vc deseja expor metodos http, será necessario adicionar o starter web.
+
+Funcionamento
+	- A configuração basica de uma aplicação spring boot e colocar o spring boot starter parent (artifactID: spring-boot-starter-parent) é onde contem as configurações iniciais, e se coloca essa configuração na tag <parent></parent> e colocamos a dependencia spring boot starter (artifactID: spring-boot-starter) no pom.xml, ou seja, os starter que irão prover as configurações basicas para cada objetivo desejado, por exemplo o "starter web" que ira nos prover a exposição de metodos http, dentre outras;
 
 Vantagens
 	Padronização
 	Produtividade
 	Fácil implantação
 	Poucas configurações
+
+Spring Boot Core e Spring Framework
+	- Criando um projeto Spring Boot do zero no Intellij;
+	- Hello World com Spring Boot;
+	- Starters: Como funciona a mágica por trás do Spring Boot;
+	- Configurations e Beans;
+	- O Container IOC (Inversão de Controle) do Spring Framework;
+	- Injeção de Dependencia;
+	- Configurações através de convenção;
+	- Trabalhando com multiplos ambientes e profiles;
+	- Criando annotations customizadas de configuração;
+
+Persistência e Acesso a Dados com Spring Data JPA
+	- Configurando e obtendo conexões com base de dados
+		- HikariCP (a solid, high-performance, JDBC connection pool)
+
+RESTFul API's com Spring Web
+
+Bean Validation
+
+Spring Security e JSON Web Token (JWT)
+
+SWAGGER
 

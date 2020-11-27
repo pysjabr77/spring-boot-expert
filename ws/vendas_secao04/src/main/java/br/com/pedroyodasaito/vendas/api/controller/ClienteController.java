@@ -35,6 +35,7 @@ public class ClienteController {
     }
 
     @PutMapping(value = "/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public Cliente update(@PathVariable Integer id, @RequestBody Cliente cliente) {
         return clienteRepository
                 .findById(id)
@@ -53,7 +54,7 @@ public class ClienteController {
                 .findById(id)
                 .map(c -> {
                     clienteRepository.delete(c);
-                    return c;
+                    return Void.TYPE;
                 })
                 .orElseThrow(() ->
                         new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente não encontrado"));
