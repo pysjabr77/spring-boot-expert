@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14828e7e-fcf8-46dd-a72d-09bdb5ce8f84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../vendas_secao04/src/main/java/br/com/pedroyodasaito/vendas/api/controller/ClienteController_Versão01.java.bck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vendas_secao04/src/main/java/br/com/pedroyodasaito/vendas/api/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vendas_secao04/src/main/java/br/com/pedroyodasaito/vendas/api/controller/ClienteController.java" afterDir="false" />
-    </list>
+    <list default="true" id="14828e7e-fcf8-46dd-a72d-09bdb5ce8f84" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -333,7 +329,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1748401" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
