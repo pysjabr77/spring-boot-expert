@@ -1,6 +1,7 @@
 package br.com.pedroyodasaito.vendas.api.controller;
 
 import br.com.pedroyodasaito.vendas.api.ApiErrors;
+import br.com.pedroyodasaito.vendas.exception.PedidoNaoEncontradoException;
 import br.com.pedroyodasaito.vendas.exception.RegraNegocioException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -14,6 +15,12 @@ public class ApplicationControllerAdvice {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ApiErrors handleRegraNegocioException(RegraNegocioException regraNegocioException) {
         return new ApiErrors(regraNegocioException.getMessage());
+    }
+
+    @ExceptionHandler(PedidoNaoEncontradoException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ApiErrors handlePedidoNotFoundException(PedidoNaoEncontradoException pedidoNaoEncontradoException) {
+        return new ApiErrors(pedidoNaoEncontradoException.getMessage());
     }
 
 }
