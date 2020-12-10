@@ -1,6 +1,8 @@
 package br.com.pedroyodasaito.vendas.domain.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.Objects;
 
@@ -12,8 +14,10 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Integer id;
+    @NotEmpty(message = "{campo.descricao.obrigatori}")
     @Column(name = "descricao")
     private String descricao;
+    @NotNull(message = "{campo.preco.obrigatorio}")
     @Column(name = "preco_unitario", scale = 2, precision = 20)
     private BigDecimal preco;
 

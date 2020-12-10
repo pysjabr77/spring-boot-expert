@@ -1,19 +1,25 @@
 package br.com.pedroyodasaito.vendas.service.pedido.dto;
 
+import br.com.pedroyodasaito.vendas.validation.NotEmptyList;
+
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 public class PedidoDTO {
 
+    @NotNull(message = "{campo.codigo-cliente.obrigatorio}")
     private Integer clienteID;
+    @NotNull(message = "{campo.total-pedido.obrigatorio}")
     private BigDecimal total;
-    private Set<ItemPedidoDTO> itensPedido;
+    @NotEmptyList(message = "{campo.items-pedido.obrigatorio}")
+    private List<ItemPedidoDTO> itensPedido;
 
     public PedidoDTO() {
     }
 
-    public PedidoDTO(Integer clienteID, BigDecimal total, Set<ItemPedidoDTO> itensPedido) {
+    public PedidoDTO(Integer clienteID, BigDecimal total, List<ItemPedidoDTO> itensPedido) {
         this.clienteID = clienteID;
         this.total = total;
         this.itensPedido = itensPedido;
@@ -59,11 +65,11 @@ public class PedidoDTO {
         this.total = total;
     }
 
-    public Set<ItemPedidoDTO> getItensPedido() {
+    public List<ItemPedidoDTO> getItensPedido() {
         return itensPedido;
     }
 
-    public void setItensPedido(Set<ItemPedidoDTO> itensPedido) {
+    public void setItensPedido(List<ItemPedidoDTO> itensPedido) {
         this.itensPedido = itensPedido;
     }
 }

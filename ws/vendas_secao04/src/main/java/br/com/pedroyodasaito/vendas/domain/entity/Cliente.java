@@ -1,8 +1,10 @@
 package br.com.pedroyodasaito.vendas.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.Objects;
 import java.util.Set;
 
@@ -14,8 +16,11 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Integer id;
+    @NotEmpty(message = "{campo.nome.obrigatorio}")
     @Column(name = "nome", length = 100)
     private String nome;
+    @NotEmpty(message = "{campo.cpf.obrigatorio}")
+    @CPF(message = "{campo.cpf.invalido}")
     @Column(name = "cpf", length = 11)
     private String cpf;
 

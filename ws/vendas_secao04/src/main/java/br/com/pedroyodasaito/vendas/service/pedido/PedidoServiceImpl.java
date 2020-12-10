@@ -84,7 +84,7 @@ public class PedidoServiceImpl implements PedidoService {
                 }).collect(Collectors.toList());
     }
 
-    private List<ItemPedido> converterListaItemPedidoDTOToListaItemPedido (Pedido pedido, Set<ItemPedidoDTO> listaItemPedidoDTO) {
+    private List<ItemPedido> converterListaItemPedidoDTOToListaItemPedido (Pedido pedido, List<ItemPedidoDTO> listaItemPedidoDTO) {
         if(listaItemPedidoDTO.isEmpty()) {
             throw new RegraNegocioException("Não é possível realizar um pedido sem itens.");
         }
